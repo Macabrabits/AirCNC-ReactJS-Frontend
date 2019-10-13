@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import api from '../../services/api';
 
-export default function Login(){
+export default function Login( {history} ){
     const [email, setEmail] = useState('')
 
 
@@ -14,7 +14,7 @@ export default function Login(){
       localStorage.setItem('user', _id)
      
       console.log(email)
-      
+      history.push('dashboard')
     }
 
 
